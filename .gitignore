@@ -1,0 +1,29 @@
+# Keil MDK build output (regenerate by compiling, do not commit)
+Objects/
+Listings/
+DebugConfig/
+*.o
+*.d
+*.crf
+*.dep
+*.axf
+*.hex
+*.bin
+*.map
+*.lst
+*.lnp
+*.htm
+*.sct
+*.iex
+*.build_log.htm
+*.scvd
+
+# Per-user IDE layout files
+*.uvguix.*
+*.bak
+*.orig
+
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store
