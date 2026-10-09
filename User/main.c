@@ -12,9 +12,10 @@ int main(void)
 
 	while (1)
 	{
-Go_Ahead();
-	}
+		Serial_Printf("hello\r\n");
+        Delay_ms(1000);
 
+	}
 }
 
 //void USART1_IRQHandler(void)
