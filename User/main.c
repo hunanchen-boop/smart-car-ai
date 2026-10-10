@@ -12,24 +12,25 @@ int main(void)
 
 	while (1)
 	{
-		Serial_Printf("hello\r\n");
         Delay_ms(1000);
 
 	}
 }
 
-//void USART1_IRQHandler(void)
-//{
-//	if (USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
-//	{
-//		Data1=USART_ReceiveData(USART1);
-//		if(Data1==0x30)Car_Stop();
-//		if(Data1==0x31)Go_Ahead();
-//		if(Data1==0x32)Go_back();
-//		if(Data1==0x33)Turn_Left();
-//		if(Data1==0x34)Turn_Right();
-//		if(Data1==0x35)Self_Left();
-//		if(Data1==0x36)Self_Right();
-//		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
-//	}
-//}
+void USART1_IRQHandler(void)
+{
+	if (USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
+	{
+		Data1=USART_ReceiveData(USART1);
+		if(Data1==0x30)Car_Stop();
+		if(Data1==0x31)Go_Ahead();
+		if(Data1==0x32)Go_back();
+		if(Data1==0x33)Turn_Left();
+		if(Data1==0x34)Turn_Right();
+		if(Data1==0x35)Self_Left();
+		if(Data1==0x36)Self_Right();
+		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+		Serial_Printf(">>>RX:%x\r\n", Data1);
+
+	}
+}
